@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png binary
+*.zip binary
+*.xml text eol=lf
+*.json text eol=lf
+*.script text eol=lf
+*.ps1 text eol=lf
