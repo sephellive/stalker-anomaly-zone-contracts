@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="cb_wtf_location_x16"><text>внутренние помещения лаборатории X-16</text></string>
+	<string id="cb_wtf_location_x18"><text>внутренние помещения лаборатории X-18</text></string>
+
+	<string id="igi_task_text_cb_science_x16_telemetry_name"><text>Мёртвая телеметрия</text></string>
+	<string id="igi_task_text_cb_science_x16_telemetry_about"><text>После отключения установки в X-16 часть датчиков продолжает передавать обрывочные данные. Нужен человек, способный войти внутрь и вручную синхронизировать переносной регистратор с сетью лаборатории. Достаточно добраться до внутренних помещений; аппаратура сделает остальное.</text></string>
+	<string id="igi_task_text_cb_science_x16_telemetry_text"><text>Войти в X-16 и снять остаточную телеметрию лаборатории.</text></string>
+	<string id="igi_task_text_cb_science_x16_telemetry_finish"><text>Пакет данных получен. Здесь много шума, но полезные измерения тоже есть.</text></string>
+
+	<string id="igi_task_text_cb_science_x18_archive_name"><text>Эхо X-18</text></string>
+	<string id="igi_task_text_cb_science_x18_archive_about"><text>В X-18 сохранился автономный регистратор аварийной системы. Он недоступен извне и отвечает только оборудованию внутри комплекса. Войди в лабораторию, подожди завершения обмена и возвращайся. Не задерживайся ради любопытства.</text></string>
+	<string id="igi_task_text_cb_science_x18_archive_text"><text>Проникнуть в X-18 и считать архив аварийной телеметрии.</text></string>
+	<string id="igi_task_text_cb_science_x18_archive_finish"><text>Запись принята. За эти данные придётся заплатить меньше, чем за новую экспедицию — и это хорошая новость.</text></string>
+
+	<string id="igi_task_text_cb_science_rare_artifact_reference_name"><text>Эталонный образец</text></string>
+	<string id="igi_task_text_cb_science_rare_artifact_reference_about"><text>Для сверки спектрометров нужен конкретный редкий артефакт. Образец будет разобран в лаборатории, поэтому вернуть его не получится. Денежная часть умеренная, но мы выдадим защитный контейнер для следующей находки.</text></string>
+	<string id="igi_task_text_cb_science_rare_artifact_reference_text"><text>Добыть и передать учёным запрошенный редкий артефакт.</text></string>
+	<string id="igi_task_text_cb_science_rare_artifact_reference_finish"><text>Состояние образца подходит. Контейнер и оплата твои.</text></string>
+
+	<string id="igi_task_text_cb_science_dangerous_biology_name"><text>Опасная биология</text></string>
+	<string id="igi_task_text_cb_science_dangerous_biology_about"><text>Нужен свежий орган редкого мутанта. Покупать старый материал у перекупщиков бессмысленно: условия хранения никто не соблюдает. Найди подходящий образец и доставь его в лабораторию.</text></string>
+	<string id="igi_task_text_cb_science_dangerous_biology_text"><text>Добыть редкий орган опасного мутанта и передать медикам.</text></string>
+	<string id="igi_task_text_cb_science_dangerous_biology_finish"><text>Образец пригоден для работы. Получай оплату и научную аптечку.</text></string>
+
+	<string id="igi_task_text_cb_science_anomaly_calibration_name"><text>Треугольник измерений</text></string>
+	<string id="igi_task_text_cb_science_anomaly_calibration_about"><text>Нужно сравнить фон сразу в трёх точках одного района. Пройди обозначенные позиции с включённым оборудованием. Ничего собирать не требуется, но пропуск одной точки обесценит всю серию.</text></string>
+	<string id="igi_task_text_cb_science_anomaly_calibration_text"><text>Посетить три контрольные точки и завершить калибровочную серию.</text></string>
+	<string id="igi_task_text_cb_science_anomaly_calibration_finish"><text>Три замера совпали по времени. Теперь данные можно сравнивать.</text></string>
+</string_table>

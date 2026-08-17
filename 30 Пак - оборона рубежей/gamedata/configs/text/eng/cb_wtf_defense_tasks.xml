@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="igi_task_text_cb_defense_bar_mutant_surge_name"><text>Beasts at the South Gate</text></string>
+	<string id="igi_task_text_cb_defense_bar_mutant_surge_about"><text>A large mutant migration is moving from Garbage toward Rostok. Meet all three packs at the southern checkpoint before they reach the Bar.</text></string>
+	<string id="igi_task_text_cb_defense_bar_mutant_surge_text"><text>Destroy three mutant packs at Rostok's southern checkpoint.</text></string>
+	<string id="igi_task_text_cb_defense_bar_mutant_surge_finish"><text>The southern approach is secure again.</text></string>
+	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_name"><text>Breakthrough at the Barrier</text></string>
+	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_about"><text>Several Monolith squads broke through the Barrier and are pushing toward Rostok from Army Warehouses. Stop them at the northern checkpoint.</text></string>
+	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_text"><text>Destroy three Monolith squads at Rostok's northern checkpoint.</text></string>
+	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_finish"><text>None of them reached the Bar. The line held.</text></string>
+	<string id="igi_task_text_cb_defense_bar_raider_push_name"><text>Raid on Rostok</text></string>
+	<string id="igi_task_text_cb_defense_bar_raider_push_about"><text>Bandit assault groups are moving against the southern checkpoint. Engage them outside before the garrison is pinned at the gates.</text></string>
+	<string id="igi_task_text_cb_defense_bar_raider_push_text"><text>Repel the bandit raid on Rostok.</text></string>
+	<string id="igi_task_text_cb_defense_bar_raider_push_finish"><text>The raid died at the gate.</text></string>
+</string_table>

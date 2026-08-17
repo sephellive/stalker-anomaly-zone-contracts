@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="igi_task_text_cb_fieldwork_route_survey_name"><text>Route Survey</text></string>
+	<string id="igi_task_text_cb_fieldwork_route_survey_about"><text>Communication with three points along a route has become unreliable. Visit them, inspect the approaches and update our map.</text></string>
+	<string id="igi_task_text_cb_fieldwork_route_survey_text"><text>Inspect three route positions.</text></string>
+	<string id="igi_task_text_cb_fieldwork_route_survey_finish"><text>The route information is current again.</text></string>
+	<string id="igi_task_text_cb_fieldwork_medical_supplies_name"><text>Medical Consumables</text></string>
+	<string id="igi_task_text_cb_fieldwork_medical_supplies_about"><text>Our expendable medical stock is low. Assemble the requested batch and deliver it as one complete order.</text></string>
+	<string id="igi_task_text_cb_fieldwork_medical_supplies_text"><text>Deliver the requested medical supplies.</text></string>
+	<string id="igi_task_text_cb_fieldwork_medical_supplies_finish"><text>The order is complete. Here is your payment.</text></string>
+	<string id="igi_task_text_cb_fieldwork_lost_courier_name"><text>Lost Courier</text></string>
+	<string id="igi_task_text_cb_fieldwork_lost_courier_about"><text>A courier disappeared after the last checkpoint. Search the area and recover the package he was carrying.</text></string>
+	<string id="igi_task_text_cb_fieldwork_lost_courier_text"><text>Find and return the lost courier package.</text></string>
+	<string id="igi_task_text_cb_fieldwork_lost_courier_finish"><text>The route ended badly, but the package arrived.</text></string>
+	<string id="igi_task_text_cb_fieldwork_mutant_nest_name"><text>Break the Nest</text></string>
+	<string id="igi_task_text_cb_fieldwork_mutant_nest_about"><text>Two mutant packs share one position. Clear both groups in a single operation before they spread along the route.</text></string>
+	<string id="igi_task_text_cb_fieldwork_mutant_nest_text"><text>Destroy both mutant groups around the nest.</text></string>
+	<string id="igi_task_text_cb_fieldwork_mutant_nest_finish"><text>The nest is empty and the route is open.</text></string>
+</string_table>

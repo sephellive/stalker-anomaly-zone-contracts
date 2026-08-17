@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="igi_task_text_custom_combat_roadblock_name"><text>Break the Roadblock</text></string>
+	<string id="igi_task_text_custom_combat_roadblock_about"><text>An enemy squad has blocked one of the routes. They search everyone passing through and have already disrupted several deliveries. Clear them out. The pay is modest, but the job is straightforward if you can shoot.</text></string>
+	<string id="igi_task_text_custom_combat_roadblock_text"><text>Locate the enemy roadblock and eliminate the squad holding it.</text></string>
+	<string id="igi_task_text_custom_combat_roadblock_finish"><text>The route is open again. Here is the agreed amount.</text></string>
+
+	<string id="igi_task_text_custom_combat_intercept_column_name"><text>Intercept the Column</text></string>
+	<string id="igi_task_text_custom_combat_intercept_column_about"><text>Recon spotted two enemy groups moving along the same route. If they reach their allies, this direction will become troublesome. Intercept both groups at their rally point.</text></string>
+	<string id="igi_task_text_custom_combat_intercept_column_text"><text>Intercept two enemy groups and stop them from crossing the area.</text></string>
+	<string id="igi_task_text_custom_combat_intercept_column_finish"><text>The column never arrived. Good work.</text></string>
+
+	<string id="igi_task_text_custom_combat_broken_deal_name"><text>Broken Deal</text></string>
+	<string id="igi_task_text_custom_combat_broken_deal_about"><text>Two armed groups are meeting on neutral ground. Both are a problem, and they will scatter after the deal. Hit the meeting while everyone is still gathered.</text></string>
+	<string id="igi_task_text_custom_combat_broken_deal_text"><text>Clear the meeting point of both hostile groups.</text></string>
+	<string id="igi_task_text_custom_combat_broken_deal_finish"><text>No deal and no participants. Exactly what we needed.</text></string>
+
+	<string id="igi_task_text_custom_combat_two_sectors_name"><text>Two Sectors</text></string>
+	<string id="igi_task_text_custom_combat_two_sectors_about"><text>The enemy split up and occupied two positions. Remove one group and the other will dig in. Clear both sectors as part of the same operation.</text></string>
+	<string id="igi_task_text_custom_combat_two_sectors_text"><text>Eliminate the enemy squads occupying two separate sectors.</text></string>
+	<string id="igi_task_text_custom_combat_two_sectors_finish"><text>Both positions are clear. We can move through the area again.</text></string>
+
+	<string id="igi_task_text_custom_combat_veteran_cell_name"><text>Experienced Cell</text></string>
+	<string id="igi_task_text_custom_combat_veteran_cell_about"><text>I need a well-equipped enemy squad dealt with. These are not rookies around a campfire: they move carefully and keep their weapons ready. Eliminate them before they reinforce another position.</text></string>
+	<string id="igi_task_text_custom_combat_veteran_cell_text"><text>Track down and eliminate an experienced enemy squad.</text></string>
+	<string id="igi_task_text_custom_combat_veteran_cell_finish"><text>So they were not untouchable after all. Here is your payment.</text></string>
+
+	<string id="igi_task_text_custom_combat_cleanup_operation_name"><text>Operation Cleanup</text></string>
+	<string id="igi_task_text_custom_combat_cleanup_operation_about"><text>Too many armed hostiles have gathered in one area. A single precise hit will change nothing; the whole node must be broken at once. Bring enough ammunition. The fight will be dense.</text></string>
+	<string id="igi_task_text_custom_combat_cleanup_operation_text"><text>Clear a fortified area occupied by three enemy groups.</text></string>
+	<string id="igi_task_text_custom_combat_cleanup_operation_finish"><text>After that cleanup, they will not return soon.</text></string>
+
+	<string id="igi_task_text_custom_combat_false_signal_name"><text>False Signal</text></string>
+	<string id="igi_task_text_custom_combat_false_signal_about"><text>Someone is broadcasting fake stash coordinates and luring stalkers into an ambush. We found the suspected location. Go there and silence whoever is behind it.</text></string>
+	<string id="igi_task_text_custom_combat_false_signal_text"><text>Investigate the false signal and eliminate the ambush group.</text></string>
+	<string id="igi_task_text_custom_combat_false_signal_finish"><text>The channel is quiet again. A small payment for useful work.</text></string>
+
+	<string id="igi_task_text_custom_combat_deep_raid_name"><text>Deep Raid</text></string>
+	<string id="igi_task_text_custom_combat_deep_raid_about"><text>This job is for someone who can survive far from familiar bases. Two strong groups have established themselves deeper in the Zone. The road is long, the enemy is experienced, and there will be no support.</text></string>
+	<string id="igi_task_text_custom_combat_deep_raid_text"><text>Conduct a deep raid and eliminate two reinforced enemy groups.</text></string>
+	<string id="igi_task_text_custom_combat_deep_raid_finish"><text>You came back, which is already something. Since the target is gone, take the full payment.</text></string>
+</string_table>

@@ -1,0 +1,14 @@
+{
+	"WTF_VERSION": "4.2",
+	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
+	"cb_pack": "fieldwork",
+	"repeat_timeout": 172800,
+	"preconditions": ["$ cb_wtf_combat.pack_available('fieldwork')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 3, 4)", "$ cb_wtf_combat.has_valid_smarts(|smart.ids|, 1)"],
+	"entities": [
+		{"ids": "$ igi_finder.get_smarts(0,1)", "id": "$ wtf.shuffle(|this.ids|)[1] or 0", "name": "$ cb_wtf_combat.smart_name(|this.id|)", "link_id": "smart", "to_description": true},
+		{"section_name": "bar_darklab_documents", "id": "init$ igi_helper.create_on_smart(|this.section_name|, |smart.id|)", "CONTROLLER": "@$ igi_target_return.Return", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)"}
+	],
+	"rewarder": "@$ cb_wtf_combat.reward(2800, 6)",
+	"icon": "ui_inGame2_Osobiy_zakaz",
+	"quest_givers": [{"Trader": true}, {"Mechanic": true}]
+}

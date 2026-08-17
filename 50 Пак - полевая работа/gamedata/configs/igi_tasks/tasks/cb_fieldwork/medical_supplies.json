@@ -1,0 +1,11 @@
+{
+	"WTF_VERSION": "4.2",
+	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
+	"cb_pack": "fieldwork",
+	"repeat_timeout": 129600,
+	"preconditions": ["$ cb_wtf_combat.pack_available('fieldwork')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 2, 4)"],
+	"entities": [{"section_name": "$ cb_wtf_combat.choose_existing({'bandage','medkit','antirad'}, 'bandage')", "amount": "$ cb_wtf_combat.delivery_amount(|this.section_name|)", "CONTROLLER": "@$ igi_target_fetch.Fetch", "to_description": true}],
+	"rewarder": "@$ cb_wtf_combat.reward(2200, 5)",
+	"icon": "ui_inGame2_Osobiy_zakaz",
+	"quest_givers": [{"Medic": true}, {"Trader": true}]
+}

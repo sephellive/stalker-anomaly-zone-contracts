@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="igi_task_text_cb_defense_bar_mutant_surge_name"><text>Звери у южных ворот</text></string>
+	<string id="igi_task_text_cb_defense_bar_mutant_surge_about"><text>Со Свалки к Ростку движется большая стая. Сначала собаки, за ними псевдособаки и снорки. Если пропустить первую волну к воротам, в Баре начнётся бойня. Встреть их у южной заставы и уничтожь все стаи.</text></string>
+	<string id="igi_task_text_cb_defense_bar_mutant_surge_text"><text>Остановить три группы мутантов у южной заставы Ростка.</text></string>
+	<string id="igi_task_text_cb_defense_bar_mutant_surge_finish"><text>Южный проход удержан. Сегодня в Баре будет чуть спокойнее.</text></string>
+
+	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_name"><text>Прорыв через Барьер</text></string>
+	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_about"><text>Несколько отрядов «Монолита» прорвались через Барьер и идут к Ростку со стороны Армейских складов. Это не разведка: они собираются ударить по северной заставе и продавить дорогу к Бару. Перехвати фанатиков до того, как они смешаются с гарнизоном.</text></string>
+	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_text"><text>Уничтожить три отряда «Монолита» у северной заставы Ростка.</text></string>
+	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_finish"><text>Ни один отряд не прошёл. Барьер ещё держится, а Росток цел.</text></string>
+
+	<string id="igi_task_text_cb_defense_bar_raider_push_name"><text>Налёт на Росток</text></string>
+	<string id="igi_task_text_cb_defense_bar_raider_push_about"><text>Бандиты решили, что южная застава ослабла после последних стычек. Две тяжёлые группы идут на прорыв, рассчитывая разграбить склады у Бара. Встреть их снаружи, пока охрана не оказалась зажата между воротами и нападающими.</text></string>
+	<string id="igi_task_text_cb_defense_bar_raider_push_text"><text>Отразить налёт бандитов на южную заставу Ростка.</text></string>
+	<string id="igi_task_text_cb_defense_bar_raider_push_finish"><text>Налёт захлебнулся у ворот. В следующий раз они хорошо подумают.</text></string>
+</string_table>

@@ -1,0 +1,12 @@
+{
+	"WTF_VERSION": "4.2",
+	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
+	"cb_pack": "science",
+	"repeat_timeout": 345600,
+	"preconditions": ["$ db.actor:character_rank() >= 2800", "$ cb_wtf_combat.pack_available('science')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 4, 5)"],
+	"entities": [{"section_name": "$ cb_wtf_combat.choose_existing({'mutant_part_chimera_claw','mutant_part_controller_glass','mutant_part_pseudogigant_eye','mutant_part_burer_hand'}, 'mutant_part_chimera_claw')", "amount": 1, "CONTROLLER": "@$ igi_target_fetch.Fetch", "to_description": true}],
+	"bonus": "on_complete$ cb_wtf_combat.give_item('medkit_scientic', 1) or true",
+	"rewarder": "@$ cb_wtf_combat.reward(4400, 9)",
+	"icon": "ui_iconsTotal_mutant",
+	"quest_givers": [{"Leader": true, "Ecolog": true}, {"Medic": true}]
+}

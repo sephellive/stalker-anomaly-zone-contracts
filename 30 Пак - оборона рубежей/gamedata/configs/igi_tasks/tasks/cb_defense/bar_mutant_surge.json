@@ -1,0 +1,21 @@
+{
+	"WTF_VERSION": "4.2",
+	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
+	"cb_pack": "defense",
+	"repeat_timeout": 432000,
+	"preconditions": [
+		"$ db.actor:character_rank() >= 2000",
+		"$ cb_wtf_combat.pack_available('defense')",
+		"$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 1, 3)",
+		"$ cb_wtf_combat.smart_exists('bar_zastava')"
+	],
+	"entities": [
+		{"id": "$ cb_wtf_combat.smart_id('bar_zastava')", "name": "$ cb_wtf_combat.smart_name(|this.id|)", "link_id": "smart", "to_description": true},
+		{"section_name": "simulation_mix_dogs", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true},
+		{"section_name": "simulation_pseudodog_squad", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true},
+		{"section_name": "simulation_snork_2_3", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true}
+	],
+	"rewarder": "@$ cb_wtf_combat.reward(5600, 10)",
+	"icon": "ui_iconsTotal_mutant",
+	"quest_givers": [{"Petrenko": true}, {"Barkeep": true}]
+}

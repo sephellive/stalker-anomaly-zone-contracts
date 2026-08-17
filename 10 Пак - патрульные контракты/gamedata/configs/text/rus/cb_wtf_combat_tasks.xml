@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="igi_task_text_custom_combat_roadblock_name">
+		<text>Снять блокпост</text>
+	</string>
+	<string id="igi_task_text_custom_combat_roadblock_about">
+		<text>На одном из маршрутов засел вражеский отряд. Они досматривают проходящих и уже сорвали несколько поставок. Убери их без лишнего шума. Больших денег не обещаю — работа простая, если стрелять умеешь.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_roadblock_text">
+		<text>Найти вражеский блокпост и уничтожить удерживающий его отряд.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_roadblock_finish">
+		<text>Проход снова открыт. Вот условленная сумма.</text>
+	</string>
+
+	<string id="igi_task_text_custom_combat_intercept_column_name">
+		<text>Перехват колонны</text>
+	</string>
+	<string id="igi_task_text_custom_combat_intercept_column_about">
+		<text>Разведка заметила две вражеские группы, идущие одним маршрутом. Если они доберутся до своих, на этом направлении станет тесно. Перехвати обе группы на точке сбора.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_intercept_column_text">
+		<text>Перехватить две вражеские группы и не дать им пройти через район.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_intercept_column_finish">
+		<text>Колонна не дошла. Хорошая работа.</text>
+	</string>
+
+	<string id="igi_task_text_custom_combat_broken_deal_name">
+		<text>Сорванная сделка</text>
+	</string>
+	<string id="igi_task_text_custom_combat_broken_deal_about">
+		<text>На нейтральной точке намечается встреча двух вооружённых групп. Обе нам мешают, а после сделки разойдутся в разные стороны. Накрой встречу, пока все собрались вместе.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_broken_deal_text">
+		<text>Зачистить место встречи двух враждебных группировок.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_broken_deal_finish">
+		<text>Ни сделки, ни участников. Именно это и требовалось.</text>
+	</string>
+
+	<string id="igi_task_text_custom_combat_two_sectors_name">
+		<text>Два сектора</text>
+	</string>
+	<string id="igi_task_text_custom_combat_two_sectors_about">
+		<text>Противник разделился и занял две позиции. Одну группу снимешь — вторая заляжет и начнёт ждать. Поэтому зачисти оба сектора в рамках одной операции.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_two_sectors_text">
+		<text>Последовательно уничтожить вражеские отряды в двух разных секторах.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_two_sectors_finish">
+		<text>Обе позиции зачищены. Можем снова двигаться по району.</text>
+	</string>
+
+	<string id="igi_task_text_custom_combat_veteran_cell_name">
+		<text>Опытная группа</text>
+	</string>
+	<string id="igi_task_text_custom_combat_veteran_cell_about">
+		<text>Нужна проверка одного хорошо снаряжённого отряда. Это не новички у костра: двигаются грамотно, оружие держат наготове. Ликвидируй их, пока они не усилили соседние позиции.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_veteran_cell_text">
+		<text>Выследить и уничтожить опытный вражеский отряд.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_veteran_cell_finish">
+		<text>Значит, не такие уж они были неуязвимые. Держи оплату.</text>
+	</string>
+
+	<string id="igi_task_text_custom_combat_cleanup_operation_name">
+		<text>Операция «Зачистка»</text>
+	</string>
+	<string id="igi_task_text_custom_combat_cleanup_operation_about">
+		<text>В районе скопилось слишком много вооружённых противников. Одна точечная ликвидация ничего не изменит — нужно выбить весь узел сразу. Готовь боезапас, бой будет плотный.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_cleanup_operation_text">
+		<text>Зачистить укреплённый район от трёх вражеских групп.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_cleanup_operation_finish">
+		<text>После такой зачистки они нескоро сюда вернутся.</text>
+	</string>
+
+	<string id="igi_task_text_custom_combat_false_signal_name">
+		<text>Ложный сигнал</text>
+	</string>
+	<string id="igi_task_text_custom_combat_false_signal_about">
+		<text>Кто-то передаёт в эфире ложные координаты тайников и заманивает сталкеров в засаду. Мы нашли предполагаемую точку. Сходи туда и заставь организаторов замолчать.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_false_signal_text">
+		<text>Проверить источник ложного сигнала и уничтожить засадную группу.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_false_signal_finish">
+		<text>Эфир очистился. Небольшая плата за полезную работу.</text>
+	</string>
+
+	<string id="igi_task_text_custom_combat_deep_raid_name">
+		<text>Дальний рейд</text>
+	</string>
+	<string id="igi_task_text_custom_combat_deep_raid_about">
+		<text>Есть работа для того, кто уже умеет выживать вдали от знакомых баз. В глубине Зоны закрепились две сильные группы. Дорога длинная, противник опытный, поддержки не будет.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_deep_raid_text">
+		<text>Провести дальний рейд и уничтожить две усиленные группы противника.</text>
+	</string>
+	<string id="igi_task_text_custom_combat_deep_raid_finish">
+		<text>Вернулся — уже хорошо. А раз цель уничтожена, получай всё по договору.</text>
+	</string>
+</string_table>

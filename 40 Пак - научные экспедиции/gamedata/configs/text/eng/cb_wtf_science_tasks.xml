@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="cb_wtf_location_x16"><text>the interior of laboratory X-16</text></string>
+	<string id="cb_wtf_location_x18"><text>the interior of laboratory X-18</text></string>
+	<string id="igi_task_text_cb_science_x16_telemetry_name"><text>Dead Telemetry</text></string>
+	<string id="igi_task_text_cb_science_x16_telemetry_about"><text>Some X-16 sensors still transmit fragmented data. Enter the laboratory and let the portable recorder synchronize with its internal network.</text></string>
+	<string id="igi_task_text_cb_science_x16_telemetry_text"><text>Enter X-16 and collect its residual telemetry.</text></string>
+	<string id="igi_task_text_cb_science_x16_telemetry_finish"><text>The data packet arrived intact.</text></string>
+	<string id="igi_task_text_cb_science_x18_archive_name"><text>Echo of X-18</text></string>
+	<string id="igi_task_text_cb_science_x18_archive_about"><text>An autonomous emergency recorder remains in X-18. Enter the complex so the field unit can download its archive.</text></string>
+	<string id="igi_task_text_cb_science_x18_archive_text"><text>Enter X-18 and retrieve emergency telemetry.</text></string>
+	<string id="igi_task_text_cb_science_x18_archive_finish"><text>The archive will save us from sending another expedition.</text></string>
+	<string id="igi_task_text_cb_science_rare_artifact_reference_name"><text>Reference Sample</text></string>
+	<string id="igi_task_text_cb_science_rare_artifact_reference_about"><text>Our spectrometers need a specific rare artifact for calibration. The sample will be consumed, but a protective container is included in the reward.</text></string>
+	<string id="igi_task_text_cb_science_rare_artifact_reference_text"><text>Deliver the requested rare artifact to the scientists.</text></string>
+	<string id="igi_task_text_cb_science_rare_artifact_reference_finish"><text>The sample is suitable. Take the payment and container.</text></string>
+	<string id="igi_task_text_cb_science_dangerous_biology_name"><text>Dangerous Biology</text></string>
+	<string id="igi_task_text_cb_science_dangerous_biology_about"><text>A fresh organ from a rare mutant is required. Trader stock is too old for useful analysis.</text></string>
+	<string id="igi_task_text_cb_science_dangerous_biology_text"><text>Recover and deliver the requested rare mutant organ.</text></string>
+	<string id="igi_task_text_cb_science_dangerous_biology_finish"><text>The specimen is viable. Take the payment and scientific medkit.</text></string>
+	<string id="igi_task_text_cb_science_anomaly_calibration_name"><text>Measurement Triangle</text></string>
+	<string id="igi_task_text_cb_science_anomaly_calibration_about"><text>We need synchronized background readings from three positions in the same region. Visit every marked point with the equipment active.</text></string>
+	<string id="igi_task_text_cb_science_anomaly_calibration_text"><text>Visit three positions and complete the calibration series.</text></string>
+	<string id="igi_task_text_cb_science_anomaly_calibration_finish"><text>All three readings are synchronized.</text></string>
+</string_table>

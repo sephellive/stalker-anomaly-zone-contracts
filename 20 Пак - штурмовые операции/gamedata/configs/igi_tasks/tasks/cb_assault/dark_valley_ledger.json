@@ -1,0 +1,30 @@
+{
+	"WTF_VERSION": "4.2",
+	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
+	"cb_pack": "assault",
+	"repeat_timeout": 604800,
+	"preconditions": [
+		"$ db.actor:character_rank() >= 1800",
+		"$ cb_wtf_combat.pack_available('assault')",
+		"$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 2, 4)",
+		"$ cb_wtf_combat.base_assault_ready(|CACHE.task_giver_id|, 'val_smart_terrain_7_4', 'bandit')"
+	],
+	"entities": [
+		{
+			"id": "$ cb_wtf_combat.smart_id('val_smart_terrain_7_4')",
+			"name": "$ cb_wtf_combat.smart_name(|this.id|)",
+			"CONTROLLER": "@$ igi_target_assault.Assault",
+			"link_id": "smart",
+			"to_description": true
+		},
+		{
+			"section_name": "bar_darklab_documents",
+			"id": "init$ igi_helper.create_on_smart(|this.section_name|, |smart.id|)",
+			"CONTROLLER": "@$ igi_target_return.Return",
+			"cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)"
+		}
+	],
+	"rewarder": "@$ cb_wtf_combat.reward(6000, 10)",
+	"icon": "ui_inGame2_Sdelka",
+	"quest_givers": [{"Leader": true}, {"Trader": true}]
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+  <moduleName>Контракты Зоны 2.0</moduleName>
+  <moduleImage path="00 Core\docs\assets\zone-contracts-hero.png" />
+  <requiredInstallFiles>
+    <folder source="00 Core" destination="" priority="0" />
+  </requiredInstallFiles>
+  <installSteps order="Explicit">
+    <installStep name="Экономика заданий">
+      <optionalFileGroups order="Explicit">
+        <group name="Выберите один вариант денежной награды" type="SelectExactlyOne">
+          <plugins order="Explicit">
+            <plugin name="Суровая экономика — рекомендуется">
+              <description>Денежная часть всех заданий умножается на 0,75. Репутация не уменьшается. Предназначено для тяжёлой прогрессии GAMMA.</description>
+              <files><folder source="01 Баланс - суровый" destination="" priority="10" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Умеренная экономика">
+              <description>Используются базовые суммы из документации без дополнительного множителя. Подходит для более быстрого прохождения.</description>
+              <files><folder source="02 Баланс - умеренный" destination="" priority="10" /></files>
+              <typeDescriptor><type name="Optional" /></typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+    <installStep name="Паки заданий">
+      <optionalFileGroups order="Explicit">
+        <group name="Выберите нужные типы заданий" type="SelectAny">
+          <plugins order="Explicit">
+            <plugin name="Патрульные контракты — 8 заданий">
+              <description>Короткие и средние перестрелки на динамически выбранных позициях: блокпосты, засады, колонны, ветераны и дальние рейды. До двух активных заданий, общий кулдаун 12 игровых часов.</description>
+              <files><folder source="10 Пак - патрульные контракты" destination="" priority="20" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Штурмовые операции — 4 задания">
+              <description>Агропром, Тёмная долина, Армейские склады и Мёртвый город. Зачищается реальный текущий гарнизон, затем забираются документы. База должна восстановиться перед повтором. Только один штурм, кулдаун 3 игровых дня.</description>
+              <files><folder source="20 Пак - штурмовые операции" destination="" priority="20" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Оборона рубежей — 3 задания">
+              <description>Защита Ростка от мутантов со Свалки, бандитского налёта или прорыва «Монолита» через Барьер. Созданные волны удаляются при отказе. Только одна оборона, кулдаун 2 игровых дня.</description>
+              <files><folder source="30 Пак - оборона рубежей" destination="" priority="20" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Научные экспедиции — 5 заданий">
+              <description>Вылазки в X-16 и X-18, эталонный артефакт, редкая биология и серия полевых измерений. До двух активных заданий, общий кулдаун 1 игровой день.</description>
+              <files><folder source="40 Пак - научные экспедиции" destination="" priority="20" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Полевая работа — 4 задания">
+              <description>Разведка маршрута, медицинское снабжение, поиск пропавшего курьера и зачистка логова. Меньше стрельбы, небольшая оплата, до двух активных заданий и кулдаун 8 игровых часов.</description>
+              <files><folder source="50 Пак - полевая работа" destination="" priority="20" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+  </installSteps>
+</config>

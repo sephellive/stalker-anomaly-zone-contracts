@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="igi_task_text_cb_assault_agroprom_archive_name"><text>Agroprom Archive</text></string>
+	<string id="igi_task_text_cb_assault_agroprom_archive_about"><text>The military complex at Agroprom is active again. Clear its present garrison and recover the latest command archive. Both objectives are mandatory.</text></string>
+	<string id="igi_task_text_cb_assault_agroprom_archive_text"><text>Clear the Agroprom military base and recover the command archive.</text></string>
+	<string id="igi_task_text_cb_assault_agroprom_archive_finish"><text>The garrison is gone and the archive is ours. Good work.</text></string>
+	<string id="igi_task_text_cb_assault_dark_valley_ledger_name"><text>Black Ledger</text></string>
+	<string id="igi_task_text_cb_assault_dark_valley_ledger_about"><text>The Dark Valley bandits keep a ledger of tolls, couriers and buyers at their base. Break their defense and recover the complete record.</text></string>
+	<string id="igi_task_text_cb_assault_dark_valley_ledger_text"><text>Assault the Dark Valley bandit base and seize its ledger.</text></string>
+	<string id="igi_task_text_cb_assault_dark_valley_ledger_finish"><text>Their private business is private no longer.</text></string>
+	<string id="igi_task_text_cb_assault_freedom_signal_book_name"><text>Frequency Book</text></string>
+	<string id="igi_task_text_cb_assault_freedom_signal_book_about"><text>Freedom keeps reserve callsigns and frequencies at its Army Warehouses base. Clear the defenders and take the signal book from command.</text></string>
+	<string id="igi_task_text_cb_assault_freedom_signal_book_text"><text>Clear Freedom's main base and capture its frequency book.</text></string>
+	<string id="igi_task_text_cb_assault_freedom_signal_book_finish"><text>They will have to rebuild their communications network.</text></string>
+	<string id="igi_task_text_cb_assault_dead_city_contracts_name"><text>Contract Archive</text></string>
+	<string id="igi_task_text_cb_assault_dead_city_contracts_about"><text>The mercenary headquarters in Dead City holds copies of active contracts, clients and routes. Clear the base and remove that archive.</text></string>
+	<string id="igi_task_text_cb_assault_dead_city_contracts_text"><text>Assault the Dead City mercenary base and recover its contracts.</text></string>
+	<string id="igi_task_text_cb_assault_dead_city_contracts_finish"><text>This intelligence is worth far more than the paper carrying it.</text></string>
+</string_table>

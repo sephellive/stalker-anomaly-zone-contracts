@@ -1,0 +1,43 @@
+{
+	"WTF_VERSION": "4.2",
+	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
+	"cb_pack": "patrol",
+	"repeat_timeout": 259200,
+	"preconditions": [
+		"$ db.actor:character_rank() >= 1500",
+		"$ cb_wtf_combat.has_valid_smarts(|smart.ids|, 1)",
+		"$ cb_wtf_combat.pack_available('patrol')",
+		"$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 6, 8)"
+	],
+	"entities": [
+		{
+			"ids": "$ igi_finder.get_smarts(0,1)",
+			"id": "$ wtf.shuffle(|this.ids|)[1] or 0",
+			"name": "$ cb_wtf_combat.smart_name(|this.id|)",
+			"link_id": "smart",
+			"to_description": true
+		},
+		{
+			"GEN": "@$ igi_generate.Amount(2)",
+			"faction": "$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of actor and enemy of taskgiver')",
+			"section_name": "$ cb_wtf_combat.squad_section(|this.faction|, -1)",
+			"id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
+			"init": "init$ igi_helper.init_squad(|this.id|)",
+			"CONTROLLER": "@$ igi_target_kill.Kill",
+			"to_description": true
+		},
+		{
+			"faction": "$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of actor and enemy of taskgiver')",
+			"section_name": "$ cb_wtf_combat.squad_section(|this.faction|, 0)",
+			"id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
+			"init": "init$ igi_helper.init_squad(|this.id|)",
+			"CONTROLLER": "@$ igi_target_kill.Kill",
+			"to_description": true
+		}
+	],
+	"rewarder": "@$ cb_wtf_combat.reward(4600, 8)",
+	"icon": "ui_inGame2_PD_Lider",
+	"quest_givers": [
+		{"Leader": true}
+	]
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="igi_task_text_cb_assault_agroprom_archive_name"><text>Архив Агропрома</text></string>
+	<string id="igi_task_text_cb_assault_agroprom_archive_about"><text>Военные снова заполнили комплекс на Агропроме. В кабинете командования лежит свежая сводка по блокпостам и маршрутам снабжения. Зачисти гарнизон, найди документы и принеси их мне. Уйти с одними бумагами не получится: пока база удерживается, операция не считается завершённой.</text></string>
+	<string id="igi_task_text_cb_assault_agroprom_archive_text"><text>Зачистить военную базу на Агропроме и забрать архив командования.</text></string>
+	<string id="igi_task_text_cb_assault_agroprom_archive_finish"><text>Гарнизон снят, архив у нас. Когда военные восстановят базу, обстановка наверняка изменится.</text></string>
+
+	<string id="igi_task_text_cb_assault_dark_valley_ledger_name"><text>Чёрная бухгалтерия</text></string>
+	<string id="igi_task_text_cb_assault_dark_valley_ledger_about"><text>На базе бандитов в Тёмной долине хранят журнал поборов, маршруты курьеров и имена покупателей. Нам нужен весь журнал, а не несколько вырванных страниц. Подави сопротивление на базе и найди записи в штабе.</text></string>
+	<string id="igi_task_text_cb_assault_dark_valley_ledger_text"><text>Штурмовать базу бандитов в Тёмной долине и изъять бухгалтерский журнал.</text></string>
+	<string id="igi_task_text_cb_assault_dark_valley_ledger_finish"><text>Теперь их тайные сделки перестали быть тайными. Оплата по договору.</text></string>
+
+	<string id="igi_task_text_cb_assault_freedom_signal_book_name"><text>Книга частот</text></string>
+	<string id="igi_task_text_cb_assault_freedom_signal_book_about"><text>На главной базе «Свободы» хранится книга позывных и резервных частот. Пока она у них, любое наше движение на Складах быстро становится известным. Сломи оборону базы и забери книгу из командного помещения.</text></string>
+	<string id="igi_task_text_cb_assault_freedom_signal_book_text"><text>Зачистить базу «Свободы» на Армейских складах и захватить книгу частот.</text></string>
+	<string id="igi_task_text_cb_assault_freedom_signal_book_finish"><text>Хорошая добыча. Им придётся менять всю сеть связи, а нам это даст время.</text></string>
+
+	<string id="igi_task_text_cb_assault_dead_city_contracts_name"><text>Архив контрактов</text></string>
+	<string id="igi_task_text_cb_assault_dead_city_contracts_about"><text>В штабе наёмников в Мёртвом городе лежат копии текущих контрактов. Это не просто список целей: там заказчики, авансы и маршруты групп. Войди на базу, уничтожь её защитников и вынеси архив.</text></string>
+	<string id="igi_task_text_cb_assault_dead_city_contracts_text"><text>Штурмовать базу наёмников в Мёртвом городе и забрать архив контрактов.</text></string>
+	<string id="igi_task_text_cb_assault_dead_city_contracts_finish"><text>Вот это уже полезная разведка. За такой архив платят не за вес бумаги.</text></string>
+</string_table>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="igi_task_text_cb_fieldwork_route_survey_name"><text>Проверка маршрута</text></string>
+	<string id="igi_task_text_cb_fieldwork_route_survey_about"><text>Связь с тремя точками на маршруте стала нестабильной. Пройди их лично, проверь подходы и отметь безопасные проходы. Стрелять, возможно, не придётся, но дорогу никто не гарантирует.</text></string>
+	<string id="igi_task_text_cb_fieldwork_route_survey_text"><text>Последовательно проверить три позиции маршрута.</text></string>
+	<string id="igi_task_text_cb_fieldwork_route_survey_finish"><text>Маршрут обновлён. Полезная работа без лишнего геройства.</text></string>
+
+	<string id="igi_task_text_cb_fieldwork_medical_supplies_name"><text>Расходный материал</text></string>
+	<string id="igi_task_text_cb_fieldwork_medical_supplies_about"><text>Запасы расходников снова на исходе. Нужна небольшая партия конкретного медицинского материала, без контрабандных наценок и обещаний привезти завтра. Собери заказ и принеси всё одной партией.</text></string>
+	<string id="igi_task_text_cb_fieldwork_medical_supplies_text"><text>Собрать и передать заказанную партию медицинских припасов.</text></string>
+	<string id="igi_task_text_cb_fieldwork_medical_supplies_finish"><text>Комплект полный. Здесь оплата за товар и за то, что не пришлось ждать.</text></string>
+
+	<string id="igi_task_text_cb_fieldwork_lost_courier_name"><text>Пропавший курьер</text></string>
+	<string id="igi_task_text_cb_fieldwork_lost_courier_about"><text>Курьер не вышел на связь после последней контрольной точки. Сам человек, скорее всего, уже не вернётся, но его пакет нужен заказчику. Осмотри район, найди документы и принеси их обратно.</text></string>
+	<string id="igi_task_text_cb_fieldwork_lost_courier_text"><text>Найти пакет пропавшего курьера и вернуть его заказчику.</text></string>
+	<string id="igi_task_text_cb_fieldwork_lost_courier_finish"><text>Печальный конец маршрута, но пакет дошёл. Вот твоя доля.</text></string>
+
+	<string id="igi_task_text_cb_fieldwork_mutant_nest_name"><text>Разорить логово</text></string>
+	<string id="igi_task_text_cb_fieldwork_mutant_nest_about"><text>На одной позиции обосновались две стаи: крупные твари держат центр, мелкие прочёсывают подходы. Обычная охота их только растревожит. Зачисти обе группы за один выход.</text></string>
+	<string id="igi_task_text_cb_fieldwork_mutant_nest_text"><text>Уничтожить две группы мутантов в районе логова.</text></string>
+	<string id="igi_task_text_cb_fieldwork_mutant_nest_finish"><text>Логово пусто. На какое-то время маршрут снова безопасен.</text></string>
+</string_table>
