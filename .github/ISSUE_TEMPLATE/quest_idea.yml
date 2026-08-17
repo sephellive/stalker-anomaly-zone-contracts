@@ -1,21 +1,21 @@
-name: Идея задания
-description: Предложить новый контракт или изменение баланса
-title: '[Idea] '
+name: Идея задания / Quest idea
+description: Предложить контракт или баланс / Suggest a quest or balance change
+title: '[Idea / Идея] '
 labels: [enhancement]
 body:
   - type: input
     id: faction
     attributes:
-      label: Группировка и квестодатель
+      label: Группировка и квестодатель / Faction and quest giver
   - type: textarea
     id: concept
     attributes:
-      label: Сценарий
-      description: Опишите цель, локацию, противников и условие завершения.
+      label: Сценарий / Scenario
+      description: Опишите цель, локацию, противников и завершение. / Describe the objective, location, enemies and completion condition.
     validations:
       required: true
   - type: textarea
     id: reward
     attributes:
-      label: Награда и ограничения
-      description: Предложите награду, кулдаун и условия повторения.
+      label: Награда и ограничения / Reward and restrictions
+      description: Предложите награду, кулдаун и повтор. / Suggest a reward, cooldown and repeat conditions.
