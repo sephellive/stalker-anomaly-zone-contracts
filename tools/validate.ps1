@@ -10,7 +10,10 @@ function Fail([string]$Message) {
 }
 
 $taskFiles = Get-ChildItem -LiteralPath $repoRoot -Recurse -Filter '*.json' -File |
-    Where-Object { $_.FullName -match '[\\/]gamedata[\\/]configs[\\/]igi_tasks[\\/]tasks[\\/]' }
+    Where-Object {
+        $_.FullName -notmatch '[\\/]dist[\\/]' -and
+        $_.FullName -match '[\\/]gamedata[\\/]configs[\\/]igi_tasks[\\/]tasks[\\/]'
+    }
 
 if ($taskFiles.Count -ne 24) {
     Fail "expected 24 task files, found $($taskFiles.Count)"
@@ -29,7 +32,8 @@ foreach ($file in $taskFiles) {
     }
 }
 
-$xmlFiles = Get-ChildItem -LiteralPath $repoRoot -Recurse -Filter '*.xml' -File
+$xmlFiles = Get-ChildItem -LiteralPath $repoRoot -Recurse -Filter '*.xml' -File |
+    Where-Object { $_.FullName -notmatch '[\\/]dist[\\/]' }
 foreach ($file in $xmlFiles) {
     $document = New-Object System.Xml.XmlDocument
     $document.PreserveWhitespace = $true
@@ -61,20 +65,54 @@ if ($rusDiff) {
     Fail 'Russian and English localization id sets differ'
 }
 
-$moduleConfig = Join-Path $repoRoot 'fomod/ModuleConfig.xml'
-$moduleDocument = New-Object System.Xml.XmlDocument
-$moduleDocument.Load($moduleConfig)
-foreach ($attribute in $moduleDocument.SelectNodes('//@source')) {
-    $sourcePath = Join-Path $repoRoot $attribute.Value
-    if (-not (Test-Path -LiteralPath $sourcePath)) {
-        Fail "FOMOD source path does not exist: $($attribute.Value)"
+$moduleConfigs = @(
+    (Join-Path $repoRoot 'fomod/ModuleConfig.ru.xml'),
+    (Join-Path $repoRoot 'fomod/ModuleConfig.en.xml')
+)
+foreach ($moduleConfig in $moduleConfigs) {
+    $moduleDocument = New-Object System.Xml.XmlDocument
+    $moduleDocument.Load($moduleConfig)
+    foreach ($attribute in $moduleDocument.SelectNodes('//@source')) {
+        $sourcePath = Join-Path $repoRoot $attribute.Value
+        if (-not (Test-Path -LiteralPath $sourcePath)) {
+            Fail "FOMOD source path does not exist: $($attribute.Value)"
+        }
     }
+}
+
+$ruModuleText = [IO.File]::ReadAllText($moduleConfigs[0], [Text.Encoding]::UTF8)
+$enModuleText = [IO.File]::ReadAllText($moduleConfigs[1], [Text.Encoding]::UTF8)
+if ($ruModuleText -notmatch '[^\x00-\x7F]' -or $enModuleText -notmatch 'Quest Economy') {
+    Fail 'localized FOMOD descriptions are missing'
+}
+
+$markdownFiles = @(
+    (Join-Path $repoRoot 'README.md'),
+    (Join-Path $repoRoot 'CHANGELOG.md'),
+    (Join-Path $repoRoot 'CONTRIBUTING.md'),
+    (Join-Path $repoRoot 'docs/MODDB.md')
+)
+foreach ($file in $markdownFiles) {
+    $text = [IO.File]::ReadAllText($file, [Text.Encoding]::UTF8)
+    if ($text -notmatch '[^\x00-\x7F]' -or $text -notmatch '## English') {
+        Fail "bilingual sections are missing in $file"
+    }
+}
+
+$htmlPath = Join-Path $repoRoot '00 Core/docs/index.html'
+$htmlText = [IO.File]::ReadAllText($htmlPath, [Text.Encoding]::UTF8)
+$catalogQuestRows = [regex]::Matches($htmlText, "\['(?:patrol|assault|defense|science|fieldwork)'").Count
+if ($catalogQuestRows -ne 48 -or $htmlText -notmatch 'data-lang="ru"' -or $htmlText -notmatch 'data-lang="en"') {
+    Fail 'the HTML catalog must contain 24 RU and 24 EN quest rows and both language controls'
 }
 
 $textExtensions = @('.json', '.xml', '.html', '.md', '.txt', '.script', '.ps1', '.yml', '.yaml', '.ini')
 $forbiddenPattern = 'co' + 'dex'
 $forbiddenHits = Get-ChildItem -LiteralPath $repoRoot -Recurse -File |
-    Where-Object { $textExtensions -contains $_.Extension.ToLowerInvariant() } |
+    Where-Object {
+        $_.FullName -notmatch '[\\/]dist[\\/]' -and
+        $textExtensions -contains $_.Extension.ToLowerInvariant()
+    } |
     Select-String -Pattern $forbiddenPattern -CaseSensitive:$false
 
 if ($forbiddenHits) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fomod>
-  <Name>Контракты Зоны</Name>
+  <Name>Контракты Зоны / Zone Contracts</Name>
   <Author>Sephellive, Igigog, folk, Lasse Scheyde</Author>
-  <Version>2.0</Version>
+  <Version>2.1.0</Version>
   <Website>https://github.com/sephellive/stalker-anomaly-zone-contracts</Website>
-  <Description>Модульный набор повторяемых заданий для Weird Tasks Framework 4.2.3.</Description>
+  <Description>Модульный набор повторяемых заданий для Weird Tasks Framework 4.2.3. / A modular repeatable quest pack for Weird Tasks Framework 4.2.3.</Description>
 </fomod>

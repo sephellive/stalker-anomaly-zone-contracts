@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+  <moduleName>Zone Contracts 2.1</moduleName>
+  <moduleImage path="00 Core\docs\assets\zone-contracts-hero.png" />
+  <requiredInstallFiles>
+    <folder source="00 Core" destination="" priority="0" />
+  </requiredInstallFiles>
+  <installSteps order="Explicit">
+    <installStep name="Quest Economy">
+      <optionalFileGroups order="Explicit">
+        <group name="Choose one monetary reward preset" type="SelectExactlyOne">
+          <plugins order="Explicit">
+            <plugin name="Harsh economy — recommended">
+              <description>Multiplies the monetary part of every reward by 0.75. Reputation rewards are unchanged. Intended for slower and harsher GAMMA progression.</description>
+              <files><folder source="01 Баланс - суровый" destination="" priority="10" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Moderate economy">
+              <description>Uses the documented base payments without an additional multiplier. Better suited to a faster playthrough.</description>
+              <files><folder source="02 Баланс - умеренный" destination="" priority="10" /></files>
+              <typeDescriptor><type name="Optional" /></typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+    <installStep name="Quest Packs">
+      <optionalFileGroups order="Explicit">
+        <group name="Choose the quest types to install" type="SelectAny">
+          <plugins order="Explicit">
+            <plugin name="Patrol Contracts — 8 quests">
+              <description>Short and medium firefights at dynamically selected positions: roadblocks, ambushes, columns, veteran squads and deep raids. Up to two active quests with a shared 12-hour in-game cooldown.</description>
+              <files><folder source="10 Пак - патрульные контракты" destination="" priority="20" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Assault Operations — 4 quests">
+              <description>Agroprom, Dark Valley, Army Warehouses and Dead City. Clear the actual current garrison, then recover its documents. The base must repopulate before the quest can repeat. One active assault with a shared three-day in-game cooldown.</description>
+              <files><folder source="20 Пак - штурмовые операции" destination="" priority="20" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Defend the Line — 3 quests">
+              <description>Defend Rostok from mutants arriving through Garbage, a bandit raid or a Monolith breakthrough from the Barrier. Spawned waves are cleaned up when a quest is abandoned. One active defense with a shared two-day in-game cooldown.</description>
+              <files><folder source="30 Пак - оборона рубежей" destination="" priority="20" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Scientific Expeditions — 5 quests">
+              <description>Trips into X-16 and X-18, a reference artifact, rare mutant biology and a series of field measurements. Up to two active quests with a shared one-day in-game cooldown.</description>
+              <files><folder source="40 Пак - научные экспедиции" destination="" priority="20" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Field Work — 4 quests">
+              <description>Route surveys, medical supplies, a missing courier and clearing a mutant nest. Less gunfire, modest payment, up to two active quests and an eight-hour in-game cooldown.</description>
+              <files><folder source="50 Пак - полевая работа" destination="" priority="20" /></files>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+  </installSteps>
+</config>

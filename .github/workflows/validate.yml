@@ -1,4 +1,4 @@
-name: Validate
+name: Validate / Проверка
 
 on:
   push:
@@ -15,9 +15,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Validate tasks and installer
+      - name: Validate tasks and installer / Проверить задания и установщик
         shell: pwsh
         run: ./tools/validate.ps1
-      - name: Test release build
+      - name: Test RU and EN release builds / Проверить сборку RU и EN
         shell: pwsh
         run: ./tools/build-release.ps1 -Version 0.0.0-ci
