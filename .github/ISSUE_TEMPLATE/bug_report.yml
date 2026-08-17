@@ -1,0 +1,42 @@
+name: Ошибка задания
+description: Сообщить о вылете, зависшем или некорректном задании
+title: '[Bug] '
+labels: [bug]
+body:
+  - type: dropdown
+    id: pack
+    attributes:
+      label: Пак
+      options:
+        - Патрульные контракты
+        - Штурмовые операции
+        - Оборона рубежей
+        - Научные экспедиции
+        - Полевая работа
+        - FOMOD / установка
+    validations:
+      required: true
+  - type: input
+    id: task
+    attributes:
+      label: Название задания
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как воспроизвести
+      description: Укажите квестодателя, локацию и последовательность действий.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Лог и версия сборки
+      description: Приложите конец xray-лога и укажите версии GAMMA, WTF и аддона.
+    validations:
+      required: true
+  - type: checkboxes
+    id: save
+    attributes:
+      label: Проверка сохранения
+      options:
+        - label: Ошибка повторяется после загрузки сохранения
