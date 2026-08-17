@@ -4,15 +4,37 @@
 	"cb_pack": "defense",
 	"repeat_timeout": 432000,
 	"preconditions": [
-		"$ db.actor:character_rank() >= 2800",
+		"$ db.actor:character_rank() >= 4200",
 		"$ cb_wtf_combat.pack_available('defense')",
 		"$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 3, 3)",
-		"$ cb_wtf_combat.smart_exists('bar_zastava')"
+		"$ cb_wtf_combat.defense_ready('bar_zastava', 'bar_zastava_dogs_lair', {'cb_defense_bandit_assault','cb_defense_bandit_elite'})"
 	],
 	"entities": [
-		{"id": "$ cb_wtf_combat.smart_id('bar_zastava')", "name": "$ cb_wtf_combat.smart_name(|this.id|)", "link_id": "smart", "to_description": true},
-		{"section_name": "bandit_sim_squad_advanced", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true},
-		{"section_name": "bandit_sim_squad_veteran", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true}
+		{
+			"level_name": "l05_bar",
+			"target_smart": "bar_zastava",
+			"spawn_smart": "bar_zastava_dogs_lair",
+			"trigger_radius": 50,
+			"hold_radius": 340,
+			"max_active": 3,
+			"sections": [
+				"cb_defense_bandit_assault",
+				"cb_defense_bandit_assault",
+				"cb_defense_bandit_elite",
+				"cb_defense_bandit_assault",
+				"cb_defense_bandit_elite",
+				"cb_defense_bandit_elite"
+			],
+			"warning_text": "cb_wtf_defense_raider_warning",
+			"reinforcement_text": "cb_wtf_defense_raider_reinforcements",
+			"failure_text": "cb_wtf_defense_raider_failure",
+			"prepare_text": "cb_wtf_defense_raider_prepare",
+			"fight_text": "cb_wtf_defense_raider_fight",
+			"sender_name": "bar_petrenko_name",
+			"sender_icon": "ui_inGame2_petrenko",
+			"CONTROLLER": "@$ cb_wtf_combat.HeavyDefense",
+			"to_description": true
+		}
 	],
 	"rewarder": "@$ cb_wtf_combat.reward(4800, 9)",
 	"icon": "ui_inGame2_Neizvestnoe_oruzhie",

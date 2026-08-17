@@ -1,4 +1,4 @@
-КОНТРАКТЫ ЗОНЫ / ZONE CONTRACTS 2.1 — WTF 4.2.3
+КОНТРАКТЫ ЗОНЫ / ZONE CONTRACTS 2.2 — WTF 4.2.3
 
 РУССКИЙ
 --------------------
@@ -13,7 +13,7 @@
 --------------------
 1. Патрульные контракты — 8 динамических боевых заданий с уменьшенной оплатой.
 2. Штурмовые операции — 4 живые базы, зачистка гарнизона и захват документов.
-3. Оборона рубежей — 3 сценария защиты Ростка.
+3. Оборона рубежей — 3 тяжёлых сценария по шесть групп или волн.
 4. Научные экспедиции — 5 заданий про лаборатории, артефакты и исследования.
 5. Полевая работа — 4 задания на разведку, снабжение, поиск и охоту.
 
@@ -41,6 +41,9 @@
 - Работает на существующих сохранениях.
 - Не изменяет оригинальные файлы WTF, New Tasks или GAMMA.
 - Созданные для обороны отряды удаляются при отказе от задания.
+- Оборона начинается после прибытия игрока на рубеж и предупреждения квестодателя.
+- В прорыве «Монолита» есть экзоскелетчики и два расчёта РПГ.
+- Уже активная старая версия задания сохраняется до сдачи или отмены.
 
 Баланс FOMOD
 --------------------
@@ -81,7 +84,7 @@ Packs
 --------------------
 1. Patrol Contracts — 8 dynamic combat quests with reduced payment.
 2. Assault Operations — 4 active bases, garrison cleanup and document recovery.
-3. Defend the Line — 3 scenarios defending Rostok.
+3. Defend the Line — 3 heavy scenarios with six groups or waves each.
 4. Scientific Expeditions — 5 quests involving laboratories, artifacts and research.
 5. Field Work — 4 quests involving scouting, supplies, recovery and hunting.
 
@@ -109,6 +112,9 @@ Compatibility
 - Works with existing saves.
 - Does not overwrite original WTF, New Tasks or GAMMA files.
 - Squads spawned for defense quests are removed when the quest is abandoned.
+- A defense starts after the player reaches the line and receives the quest giver's warning.
+- The Monolith breakthrough includes exoskeleton troops and two RPG teams.
+- An already active old quest version remains cached until completion or cancellation.
 
 FOMOD balance
 --------------------

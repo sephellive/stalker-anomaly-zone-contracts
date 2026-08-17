@@ -9,13 +9,17 @@
 
 Модульный набор повторяемых заданий для **S.T.A.L.K.E.R. GAMMA / Anomaly** на базе **Weird Tasks Framework 4.2.3**. Аддон добавляет боевые контракты, штурмы действующих баз, оборону Ростока, научные экспедиции и полевую работу. Он рассчитан на существующие сохранения и более медленную, тяжёлую прогрессию.
 
-Текущая версия: **2.1.0**. В составе 24 задания и два FOMOD-установщика — с русским и английским интерфейсом. Оба архива содержат обе игровые локализации и отличаются только языком установщика.
+Текущая версия: **2.2.0**. В составе 24 задания и два FOMOD-установщика — с русским и английским интерфейсом. Оба архива содержат обе игровые локализации и отличаются только языком установщика.
 
 ## Возможности
 
 - задания учитывают реально существующие отряды и состояние базы;
 - штурмы повторяются после восстановления гарнизона и завершения кулдауна;
-- оборонительные волны очищаются при отказе от задания;
+- каждая оборона начинается только после прибытия игрока на рубеж и предупреждения квестодателя;
+- каждая оборона состоит из шести тяжёлых групп или волн; одновременно симулируются не более трёх;
+- в прорыве «Монолита» участвуют экзоскелетчики и два расчёта РПГ;
+- оборонительные волны очищаются при отказе от задания или уходе с рубежа;
+- повышенные ранговые требования, усиленные засады, снабжение и исследовательские маршруты рассчитаны на подготовленного персонажа;
 - глобальный лимит — не более пяти активных заданий аддона;
 - однотипные задания ограничены отдельными лимитами и общими кулдаунами;
 - предложения ротируются, поэтому один NPC не выдаёт сразу весь список;
@@ -49,7 +53,7 @@
 4. Разместите аддон после Weird Tasks Framework и его базовых наборов заданий.
 5. Не отключайте установленный пак, пока задание из него активно.
 
-Новая игра не требуется. Задания, уже сохранённые WTF до обновления, могут сохранить старую награду и параметры до сдачи или отмены.
+Новая игра не требуется. Задания, уже сохранённые WTF до обновления, сохранят старую механику, награду и параметры до сдачи или отмены. Чтобы получить новую постановку обороны, завершите или отмените уже активную старую версию и возьмите контракт повторно после кулдауна.
 
 ## Защита от фарма
 
@@ -64,7 +68,7 @@
 
 ```powershell
 pwsh ./tools/validate.ps1
-pwsh ./tools/build-release.ps1 -Version 2.1.0
+pwsh ./tools/build-release.ps1 -Version 2.2.0
 ```
 
 Два готовых архива появятся в `dist/`. При публикации тега `v*` GitHub Actions автоматически проверит проект, соберёт RU/EN FOMOD и создаст GitHub Release. Инструкция для ModDB находится в [`docs/MODDB.md`](docs/MODDB.md).
@@ -92,13 +96,17 @@ pwsh ./tools/build-release.ps1 -Version 2.1.0
 
 A modular set of repeatable quests for **S.T.A.L.K.E.R. GAMMA / Anomaly**, built for **Weird Tasks Framework 4.2.3**. The addon adds combat contracts, assaults against active bases, Rostok defense scenarios, scientific expeditions and field work. It is designed for existing saves and a slower, harsher progression curve.
 
-Current version: **2.1.0**. It contains 24 quests and two FOMOD installers with Russian or English installer interfaces. Both archives include both in-game localizations; only the installer language differs.
+Current version: **2.2.0**. It contains 24 quests and two FOMOD installers with Russian or English installer interfaces. Both archives include both in-game localizations; only the installer language differs.
 
 ### Features
 
 - quests account for existing squads and the current state of a base;
 - assaults become available again after the garrison repopulates and the cooldown expires;
-- spawned defense waves are removed when their quest is abandoned;
+- every defense starts only after the player reaches the line and receives the quest giver's warning;
+- every defense contains six heavy groups or waves, with no more than three simulated at once;
+- the Monolith breakthrough includes exoskeleton troops and two RPG teams;
+- spawned defense waves are removed if the quest is abandoned or the line is deserted;
+- higher rank gates, reinforced ambushes, larger supply orders and longer research routes target a prepared character;
 - no more than five addon quests may be active at once;
 - similar quests use separate active limits and shared cooldowns;
 - offers rotate, preventing one NPC from exposing the complete list at once;
@@ -132,7 +140,7 @@ The complete interactive catalog is available at [`00 Core/docs/index.html`](00%
 4. Place the addon after Weird Tasks Framework and its base quest packs.
 5. Do not disable an installed pack while one of its quests is active.
 
-A new game is not required. Quests already cached by WTF before an update may retain their previous rewards and parameters until completion or cancellation.
+A new game is not required. Quests already cached by WTF before the update retain their old mechanics, rewards and parameters until completion or cancellation. To receive a rebuilt defense, finish or cancel its old active version and accept it again after the cooldown.
 
 ### Anti-farming rules
 
@@ -147,7 +155,7 @@ A new game is not required. Quests already cached by WTF before an update may re
 
 ```powershell
 pwsh ./tools/validate.ps1
-pwsh ./tools/build-release.ps1 -Version 2.1.0
+pwsh ./tools/build-release.ps1 -Version 2.2.0
 ```
 
 Both archives are generated in `dist/`. Publishing a `v*` tag makes GitHub Actions validate the project, build the RU and EN FOMOD archives and create a GitHub Release. See [`docs/MODDB.md`](docs/MODDB.md) for the ModDB publishing checklist.

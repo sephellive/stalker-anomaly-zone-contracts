@@ -3,10 +3,10 @@
 	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
 	"cb_pack": "science",
 	"repeat_timeout": 259200,
-	"preconditions": ["$ cb_wtf_combat.pack_available('science')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 5, 5)", "$ cb_wtf_combat.has_valid_smarts(|survey.ids|, 3)"],
+	"preconditions": ["$ db.actor:character_rank() >= 2500", "$ cb_wtf_combat.pack_available('science')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 5, 5)", "$ cb_wtf_combat.has_valid_smarts(|survey.ids|, 5)"],
 	"entities": [
 		{"ids": "$ igi_finder.get_smarts(0,1)", "link_id": "survey"},
-		{"ids": "$ |survey.ids|", "GEN": "@$ igi_generate.Split('ids', 'id', 3)", "CONTROLLER": "@$ igi_target_visit.Visit", "to_description": true}
+		{"ids": "$ |survey.ids|", "GEN": "@$ igi_generate.Split('ids', 'id', 5)", "CONTROLLER": "@$ igi_target_visit.Visit", "to_description": true}
 	],
 	"rewarder": "@$ cb_wtf_combat.reward(3200, 8)",
 	"icon": "ui_inGame2_Put_v_pripyat",

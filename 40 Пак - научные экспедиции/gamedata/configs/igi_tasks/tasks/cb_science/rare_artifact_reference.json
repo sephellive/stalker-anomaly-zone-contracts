@@ -3,7 +3,7 @@
 	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
 	"cb_pack": "science",
 	"repeat_timeout": 432000,
-	"preconditions": ["$ db.actor:character_rank() >= 3000", "$ cb_wtf_combat.pack_available('science')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 3, 5)"],
+	"preconditions": ["$ db.actor:character_rank() >= 5000", "$ cb_wtf_combat.pack_available('science')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 3, 5)"],
 	"entities": [{"section_name": "$ cb_wtf_combat.choose_existing({'af_fireball','af_night_star','af_gravi','af_dummy_glassbeads'}, 'af_fireball')", "amount": 1, "CONTROLLER": "@$ igi_target_fetch.Fetch", "to_description": true}],
 	"bonus": "on_complete$ cb_wtf_combat.give_item('lead_box', 1) or true",
 	"rewarder": "@$ cb_wtf_combat.reward(5600, 11)",

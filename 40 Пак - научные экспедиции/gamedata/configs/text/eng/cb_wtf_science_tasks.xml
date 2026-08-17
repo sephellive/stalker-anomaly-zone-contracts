@@ -15,11 +15,11 @@
 	<string id="igi_task_text_cb_science_rare_artifact_reference_text"><text>Deliver the requested rare artifact to the scientists.</text></string>
 	<string id="igi_task_text_cb_science_rare_artifact_reference_finish"><text>The sample is suitable. Take the payment and container.</text></string>
 	<string id="igi_task_text_cb_science_dangerous_biology_name"><text>Dangerous Biology</text></string>
-	<string id="igi_task_text_cb_science_dangerous_biology_about"><text>A fresh organ from a rare mutant is required. Trader stock is too old for useful analysis.</text></string>
-	<string id="igi_task_text_cb_science_dangerous_biology_text"><text>Recover and deliver the requested rare mutant organ.</text></string>
+	<string id="igi_task_text_cb_science_dangerous_biology_about"><text>Two fresh organs from the same rare mutant are required for comparative analysis. Trader stock is too old to be useful.</text></string>
+	<string id="igi_task_text_cb_science_dangerous_biology_text"><text>Recover and deliver two requested rare mutant organs.</text></string>
 	<string id="igi_task_text_cb_science_dangerous_biology_finish"><text>The specimen is viable. Take the payment and scientific medkit.</text></string>
 	<string id="igi_task_text_cb_science_anomaly_calibration_name"><text>Measurement Triangle</text></string>
-	<string id="igi_task_text_cb_science_anomaly_calibration_about"><text>We need synchronized background readings from three positions in the same region. Visit every marked point with the equipment active.</text></string>
-	<string id="igi_task_text_cb_science_anomaly_calibration_text"><text>Visit three positions and complete the calibration series.</text></string>
-	<string id="igi_task_text_cb_science_anomaly_calibration_finish"><text>All three readings are synchronized.</text></string>
+	<string id="igi_task_text_cb_science_anomaly_calibration_about"><text>We need synchronized background readings from five positions in the same region. Visit every marked point with the equipment active.</text></string>
+	<string id="igi_task_text_cb_science_anomaly_calibration_text"><text>Visit five positions and complete the calibration series.</text></string>
+	<string id="igi_task_text_cb_science_anomaly_calibration_finish"><text>All five readings are synchronized.</text></string>
 </string_table>

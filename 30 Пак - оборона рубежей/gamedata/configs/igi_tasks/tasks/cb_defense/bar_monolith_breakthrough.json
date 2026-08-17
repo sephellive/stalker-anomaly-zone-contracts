@@ -4,16 +4,38 @@
 	"cb_pack": "defense",
 	"repeat_timeout": 518400,
 	"preconditions": [
-		"$ db.actor:character_rank() >= 4500",
+		"$ db.actor:character_rank() >= 6000",
 		"$ cb_wtf_combat.pack_available('defense')",
 		"$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 2, 3)",
-		"$ cb_wtf_combat.smart_exists('bar_zastava_2')"
+		"$ cb_wtf_combat.defense_ready('bar_zastava_2', 'bar_zastava_dogs_lair_2', {'cb_defense_monolith_assault','cb_defense_monolith_rpg','cb_defense_monolith_elite'})"
 	],
 	"entities": [
-		{"id": "$ cb_wtf_combat.smart_id('bar_zastava_2')", "name": "$ cb_wtf_combat.smart_name(|this.id|)", "link_id": "smart", "to_description": true},
-		{"section_name": "monolith_sim_squad_advanced", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true},
-		{"section_name": "monolith_sim_squad_veteran", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true},
-		{"section_name": "monolith_sim_squad_advanced", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true}
+		{
+			"level_name": "l05_bar",
+			"target_smart": "bar_zastava_2",
+			"spawn_smart": "bar_zastava_dogs_lair_2",
+			"trigger_radius": 45,
+			"hold_radius": 340,
+			"max_active": 3,
+			"sections": [
+				"cb_defense_monolith_assault",
+				"cb_defense_monolith_rpg",
+				"cb_defense_monolith_elite",
+				"cb_defense_monolith_assault",
+				"cb_defense_monolith_rpg",
+				"cb_defense_monolith_elite"
+			],
+			"rpg_sections": ["cb_defense_monolith_rpg"],
+			"warning_text": "cb_wtf_defense_monolith_warning",
+			"reinforcement_text": "cb_wtf_defense_monolith_reinforcements",
+			"failure_text": "cb_wtf_defense_monolith_failure",
+			"prepare_text": "cb_wtf_defense_monolith_prepare",
+			"fight_text": "cb_wtf_defense_monolith_fight",
+			"sender_name": "bar_petrenko_name",
+			"sender_icon": "ui_inGame2_petrenko",
+			"CONTROLLER": "@$ cb_wtf_combat.HeavyDefense",
+			"to_description": true
+		}
 	],
 	"rewarder": "@$ cb_wtf_combat.reward(7800, 14)",
 	"icon": "ui_inGame2_PD_Lider",

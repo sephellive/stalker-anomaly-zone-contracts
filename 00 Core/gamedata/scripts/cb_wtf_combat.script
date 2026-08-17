@@ -219,10 +219,195 @@ function choose_existing(sections, fallback)
 end
 
 function delivery_amount(section)
-	if section == "bandage" then return 6 end
-	if section == "medkit" then return 3 end
-	if section == "antirad" then return 2 end
-	return 3
+	if section == "bandage" then return 12 end
+	if section == "medkit" then return 6 end
+	if section == "antirad" then return 4 end
+	return 6
+end
+
+function defense_ready(target_smart, spawn_smart, sections)
+	if not smart_exists(target_smart) or not smart_exists(spawn_smart) then
+		return false
+	end
+	for _, section in ipairs(sections or {}) do
+		if type(section) ~= "string" or not ini_sys:section_exist(section) then
+			return false
+		end
+	end
+	return true
+end
+
+local function cache_for_entity(entity)
+	for _, CACHE in pairs(igi_generic_task.TASKS_CACHE or {}) do
+		for _, candidate in ipairs(CACHE.entities or {}) do
+			if candidate == entity then return CACHE end
+		end
+	end
+end
+
+local function defense_sender(entity)
+	local CACHE = cache_for_entity(entity)
+	local giver = CACHE and alife_object(CACHE.task_giver_id)
+	if giver then
+		return game.translate_string(giver:character_name()), giver:character_icon()
+	end
+	return game.translate_string(entity.sender_name or "bar_petrenko_name"),
+		entity.sender_icon or "ui_inGame2_petrenko"
+end
+
+local function send_defense_tip(entity, text_id)
+	if not text_id then return end
+	local name, icon = defense_sender(entity)
+	dynamic_news_helper.send_tip(game.translate_string(text_id), name, nil, 10, icon, nil, "npc")
+end
+
+local function squad_alive(id)
+	local squad = type(id) == "number" and alife_object(id)
+	return squad and squad.commander_id and squad:commander_id() and squad or nil
+end
+
+local function retarget_squad(squad, target_smart)
+	if not squad then return end
+	squad.scripted_target = target_smart
+	squad.rush = true
+	squad.rush_to_target = true
+end
+
+local function arm_rpg_operator(squad)
+	if not squad or not ini_sys:section_exist("wpn_rpg7") then return end
+	for member in squad:squad_members() do
+		local npc = alife_object(member.id)
+		if npc then
+			alife_create_item("wpn_rpg7", npc)
+			if ini_sys:section_exist("ammo_og-7b") then
+				alife_create_item("ammo_og-7b", npc)
+			end
+			return
+		end
+	end
+end
+
+local function section_needs_rpg(entity, section)
+	for _, rpg_section in ipairs(entity.rpg_sections or {}) do
+		if rpg_section == section then return true end
+	end
+	return false
+end
+
+local function active_defense_squads(entity)
+	local active = {}
+	for _, id in ipairs(entity.squad_ids or {}) do
+		local squad = squad_alive(id)
+		if squad then
+			retarget_squad(squad, entity.target_smart)
+			active[#active + 1] = id
+		end
+	end
+	entity.squad_ids = active
+	return #active
+end
+
+local function spawn_defense_squad(entity, section)
+	local source = SIMBOARD:get_smart_by_name(entity.spawn_smart)
+	if not source then return false end
+	local squad = SIMBOARD:create_squad(source, section)
+	if not squad then return false end
+	retarget_squad(squad, entity.target_smart)
+	if section_needs_rpg(entity, section) then arm_rpg_operator(squad) end
+	entity.squad_ids[#entity.squad_ids + 1] = squad.id
+	entity.spawned = entity.spawned + 1
+	return true
+end
+
+local function fill_defense_front(entity)
+	local active = active_defense_squads(entity)
+	local limit = math.max(1, tonumber(entity.max_active) or 3)
+	while active < limit and entity.spawned < #entity.sections do
+		local section = entity.sections[entity.spawned + 1]
+		if not spawn_defense_squad(entity, section) then break end
+		active = active + 1
+	end
+	return active
+end
+
+local function actor_near_defense_smart(entity, radius)
+	if not db.actor or level.name() ~= entity.level_name then return false end
+	local smart = SIMBOARD:get_smart_by_name(entity.target_smart)
+	if not smart then return false end
+	local target = level.object_by_id(smart.id)
+	local position = target and target:position() or smart.position
+	return position and db.actor:position():distance_to_sqr(position) <= radius * radius
+end
+
+local function cleanup_defense_squads(entity)
+	for _, id in ipairs(entity.squad_ids or {}) do
+		local squad = squad_alive(id)
+		if squad then SIMBOARD:remove_squad(squad) end
+	end
+	entity.squad_ids = {}
+end
+
+HeavyDefense = {}
+
+function HeavyDefense.on_init(entity)
+	igi_helper.trace_assert(type(entity.level_name) == "string", "HeavyDefense: level_name is missing", entity)
+	igi_helper.trace_assert(type(entity.target_smart) == "string", "HeavyDefense: target_smart is missing", entity)
+	igi_helper.trace_assert(type(entity.spawn_smart) == "string", "HeavyDefense: spawn_smart is missing", entity)
+	igi_helper.trace_assert(type(entity.sections) == "table" and #entity.sections > 0,
+		"HeavyDefense: sections are missing", entity)
+	entity.stage = entity.stage or 0
+	entity.spawned = entity.spawned or 0
+	entity.squad_ids = entity.squad_ids or {}
+end
+
+function HeavyDefense.status(entity)
+	entity.stage = entity.stage or 0
+	entity.spawned = entity.spawned or 0
+	entity.squad_ids = entity.squad_ids or {}
+
+	if entity.stage == 0 then
+		local trigger_radius = math.max(5, tonumber(entity.trigger_radius) or 45)
+		if not actor_near_defense_smart(entity, trigger_radius) then
+			return igi_subtask.TASK_STATUSES.RUNNING
+		end
+		entity.stage = 1
+		send_defense_tip(entity, entity.warning_text)
+		fill_defense_front(entity)
+	end
+
+	local hold_radius = math.max(100, tonumber(entity.hold_radius) or 320)
+	if not actor_near_defense_smart(entity, hold_radius) then
+		cleanup_defense_squads(entity)
+		return igi_subtask.TASK_STATUSES.FAILED
+	end
+
+	local active = fill_defense_front(entity)
+	if not entity.mid_sent and entity.spawned >= math.ceil(#entity.sections / 2) then
+		entity.mid_sent = true
+		send_defense_tip(entity, entity.reinforcement_text)
+	end
+	if entity.spawned >= #entity.sections and active == 0 then
+		return igi_subtask.TASK_STATUSES.COMPLETED
+	end
+	return igi_subtask.TASK_STATUSES.RUNNING
+end
+
+function HeavyDefense.quest_target(entity)
+	return smart_id(entity.target_smart)
+end
+
+function HeavyDefense.complexity(entity)
+	return math.max(6000, #(entity.sections or {}) * 4500)
+end
+
+function HeavyDefense.get_description(entity)
+	local text_id = entity.stage == 1 and entity.fight_text or entity.prepare_text
+	return {targets = {game.translate_string(text_id)}}
+end
+
+function HeavyDefense.on_fail(entity)
+	cleanup_defense_squads(entity)
+	send_defense_tip(entity, entity.failure_text)
 end
 
 LevelVisit = {}

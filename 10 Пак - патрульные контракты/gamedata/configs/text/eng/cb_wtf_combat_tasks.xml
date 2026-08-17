@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <string_table>
 	<string id="igi_task_text_custom_combat_roadblock_name"><text>Break the Roadblock</text></string>
-	<string id="igi_task_text_custom_combat_roadblock_about"><text>An enemy squad has blocked one of the routes. They search everyone passing through and have already disrupted several deliveries. Clear them out. The pay is modest, but the job is straightforward if you can shoot.</text></string>
-	<string id="igi_task_text_custom_combat_roadblock_text"><text>Locate the enemy roadblock and eliminate the squad holding it.</text></string>
+	<string id="igi_task_text_custom_combat_roadblock_about"><text>Two enemy groups have fortified one of the routes. They search everyone passing through and have already disrupted several deliveries. Clear both groups. The pay is modest; the job is simple only on paper.</text></string>
+	<string id="igi_task_text_custom_combat_roadblock_text"><text>Locate the enemy roadblock and eliminate both groups holding it.</text></string>
 	<string id="igi_task_text_custom_combat_roadblock_finish"><text>The route is open again. Here is the agreed amount.</text></string>
 
 	<string id="igi_task_text_custom_combat_intercept_column_name"><text>Intercept the Column</text></string>
@@ -21,8 +21,8 @@
 	<string id="igi_task_text_custom_combat_two_sectors_finish"><text>Both positions are clear. We can move through the area again.</text></string>
 
 	<string id="igi_task_text_custom_combat_veteran_cell_name"><text>Experienced Cell</text></string>
-	<string id="igi_task_text_custom_combat_veteran_cell_about"><text>I need a well-equipped enemy squad dealt with. These are not rookies around a campfire: they move carefully and keep their weapons ready. Eliminate them before they reinforce another position.</text></string>
-	<string id="igi_task_text_custom_combat_veteran_cell_text"><text>Track down and eliminate an experienced enemy squad.</text></string>
+	<string id="igi_task_text_custom_combat_veteran_cell_about"><text>Two well-equipped enemy groups are preparing to reinforce nearby positions. These are not rookies around a campfire: they move carefully and keep their weapons ready. Eliminate both groups.</text></string>
+	<string id="igi_task_text_custom_combat_veteran_cell_text"><text>Track down and eliminate two experienced enemy groups.</text></string>
 	<string id="igi_task_text_custom_combat_veteran_cell_finish"><text>So they were not untouchable after all. Here is your payment.</text></string>
 
 	<string id="igi_task_text_custom_combat_cleanup_operation_name"><text>Operation Cleanup</text></string>
@@ -31,8 +31,8 @@
 	<string id="igi_task_text_custom_combat_cleanup_operation_finish"><text>After that cleanup, they will not return soon.</text></string>
 
 	<string id="igi_task_text_custom_combat_false_signal_name"><text>False Signal</text></string>
-	<string id="igi_task_text_custom_combat_false_signal_about"><text>Someone is broadcasting fake stash coordinates and luring stalkers into an ambush. We found the suspected location. Go there and silence whoever is behind it.</text></string>
-	<string id="igi_task_text_custom_combat_false_signal_text"><text>Investigate the false signal and eliminate the ambush group.</text></string>
+	<string id="igi_task_text_custom_combat_false_signal_about"><text>Someone is broadcasting fake stash coordinates and luring stalkers into a prepared ambush. Two groups operate at the suspected location. Go there and silence them.</text></string>
+	<string id="igi_task_text_custom_combat_false_signal_text"><text>Investigate the false signal and eliminate both ambush groups.</text></string>
 	<string id="igi_task_text_custom_combat_false_signal_finish"><text>The channel is quiet again. A small payment for useful work.</text></string>
 
 	<string id="igi_task_text_custom_combat_deep_raid_name"><text>Deep Raid</text></string>

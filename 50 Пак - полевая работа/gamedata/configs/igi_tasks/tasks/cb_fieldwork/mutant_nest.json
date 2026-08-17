@@ -3,11 +3,12 @@
 	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
 	"cb_pack": "fieldwork",
 	"repeat_timeout": 216000,
-	"preconditions": ["$ db.actor:character_rank() >= 1800", "$ cb_wtf_combat.pack_available('fieldwork')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 4, 4)", "$ cb_wtf_combat.has_valid_smarts(|smart.ids|, 1)"],
+	"preconditions": ["$ db.actor:character_rank() >= 3000", "$ cb_wtf_combat.pack_available('fieldwork')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 4, 4)", "$ cb_wtf_combat.has_valid_smarts(|smart.ids|, 1)"],
 	"entities": [
 		{"ids": "$ igi_finder.get_smarts(0,1)", "id": "$ wtf.shuffle(|this.ids|)[1] or 0", "name": "$ cb_wtf_combat.smart_name(|this.id|)", "link_id": "smart", "to_description": true},
 		{"section_name": "$ cb_wtf_combat.choose_existing({'simulation_pseudodog_squad','simulation_snork_2_3','simulation_bloodsucker_1_2'}, 'simulation_snork_2_3')", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true},
-		{"section_name": "$ cb_wtf_combat.choose_existing({'simulation_mix_dogs','simulation_cat_3_5','simulation_boar_3_5'}, 'simulation_mix_dogs')", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true}
+		{"section_name": "$ cb_wtf_combat.choose_existing({'simulation_mix_dogs','simulation_cat_3_5','simulation_boar_3_5'}, 'simulation_mix_dogs')", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true},
+		{"section_name": "$ cb_wtf_combat.choose_existing({'simulation_bloodsucker_2weak','simulation_chimera_2weak','simulation_gigant'}, 'simulation_bloodsucker_2weak')", "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id", "init": "init$ igi_helper.init_squad(|this.id|)", "CONTROLLER": "@$ igi_target_kill.Kill", "cleanup": "on_fail$ cb_wtf_combat.release_if_exists(|this.id|)", "to_description": true}
 	],
 	"rewarder": "@$ cb_wtf_combat.reward(3800, 7)",
 	"icon": "ui_iconsTotal_mutant",

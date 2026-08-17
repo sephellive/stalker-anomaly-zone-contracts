@@ -3,7 +3,7 @@
 	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
 	"cb_pack": "science",
 	"repeat_timeout": 432000,
-	"preconditions": ["$ db.actor:character_rank() >= 3500", "$ cb_wtf_combat.pack_available('science')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 2, 5)"],
+	"preconditions": ["$ db.actor:character_rank() >= 5000", "$ cb_wtf_combat.pack_available('science')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 2, 5)"],
 	"entities": [{"level_name": "l04u_labx18", "target_text": "cb_wtf_location_x18", "CONTROLLER": "@$ cb_wtf_combat.LevelVisit", "to_description": true}],
 	"bonus": "on_complete$ cb_wtf_combat.give_item('drug_radioprotector', 1) or true",
 	"rewarder": "@$ cb_wtf_combat.reward(4800, 10)",

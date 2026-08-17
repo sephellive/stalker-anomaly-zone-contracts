@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
-  <moduleName>Zone Contracts 2.1</moduleName>
+  <moduleName>Zone Contracts 2.2</moduleName>
   <moduleImage path="00 Core\docs\assets\zone-contracts-hero.png" />
   <requiredInstallFiles>
     <folder source="00 Core" destination="" priority="0" />
@@ -39,7 +39,7 @@
               <typeDescriptor><type name="Recommended" /></typeDescriptor>
             </plugin>
             <plugin name="Defend the Line — 3 quests">
-              <description>Defend Rostok from mutants arriving through Garbage, a bandit raid or a Monolith breakthrough from the Barrier. Spawned waves are cleaned up when a quest is abandoned. One active defense with a shared two-day in-game cooldown.</description>
+              <description>Heavy Rostok defense against six mutant, bandit or Monolith waves. Combat starts after arrival at the line; Monolith fields exoskeleton troops and two RPG teams. Up to three groups are active at once. One active defense with a shared two-day in-game cooldown.</description>
               <files><folder source="30 Пак - оборона рубежей" destination="" priority="20" /></files>
               <typeDescriptor><type name="Recommended" /></typeDescriptor>
             </plugin>

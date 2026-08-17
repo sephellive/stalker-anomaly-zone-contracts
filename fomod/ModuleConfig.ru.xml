@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
-  <moduleName>Контракты Зоны 2.1</moduleName>
+  <moduleName>Контракты Зоны 2.2</moduleName>
   <moduleImage path="00 Core\docs\assets\zone-contracts-hero.png" />
   <requiredInstallFiles>
     <folder source="00 Core" destination="" priority="0" />
@@ -39,7 +39,7 @@
               <typeDescriptor><type name="Recommended" /></typeDescriptor>
             </plugin>
             <plugin name="Оборона рубежей — 3 задания">
-              <description>Защита Ростка от мутантов со Свалки, бандитского налёта или прорыва «Монолита» через Барьер. Созданные волны удаляются при отказе. Только одна оборона, кулдаун 2 игровых дня.</description>
+              <description>Тяжёлая защита Ростка от шести волн мутантов, бандитов или «Монолита». Бой начинается после прибытия на рубеж; у «Монолита» есть экзоскелетчики и два расчёта РПГ. Одновременно активны до трёх групп. Только одна оборона, кулдаун 2 игровых дня.</description>
               <files><folder source="30 Пак - оборона рубежей" destination="" priority="20" /></files>
               <typeDescriptor><type name="Recommended" /></typeDescriptor>
             </plugin>

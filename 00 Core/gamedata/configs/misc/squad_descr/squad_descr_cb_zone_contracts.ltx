@@ -1,0 +1,54 @@
+; Zone Contracts: fixed-size assault groups.
+; common = false prevents GAMMA/ZCP population scaling from changing event balance.
+
+[cb_sim_default_monolith_exo]:sim_default_monolith_4
+character_profile = sar2_monolith_exo
+
+[cb_defense_monolith_assault]:online_offline_group
+faction = monolith
+npc = sim_default_monolith_2, sim_default_monolith_3, sim_default_monolith_3, sim_default_monolith_4, cb_sim_default_monolith_exo
+common = false
+
+[cb_defense_monolith_rpg]:online_offline_group
+faction = monolith
+npc = sim_default_monolith_3, sim_default_monolith_3, sim_default_monolith_4, cb_sim_default_monolith_exo, cb_sim_default_monolith_exo
+common = false
+
+[cb_defense_monolith_elite]:online_offline_group
+faction = monolith
+npc = sim_default_monolith_3, sim_default_monolith_4, sim_default_monolith_4, cb_sim_default_monolith_exo, cb_sim_default_monolith_exo
+common = false
+
+[cb_defense_bandit_assault]:online_offline_group
+faction = bandit
+npc = sim_default_bandit_2, sim_default_bandit_2, sim_default_bandit_3, sim_default_bandit_3, sim_default_bandit_4
+common = false
+
+[cb_defense_bandit_elite]:online_offline_group
+faction = bandit
+npc = sim_default_bandit_3, sim_default_bandit_3, sim_default_bandit_4, sim_default_bandit_4, sim_default_bandit_4
+common = false
+
+[cb_defense_mutant_hounds]:simulation_mix_dogs
+npc_in_squad = 8, 8
+common = false
+
+[cb_defense_mutant_pseudodogs]:simulation_pseudodog
+npc_in_squad = 5, 5
+common = false
+
+[cb_defense_mutant_snorks]:simulation_snork_2_5
+npc_in_squad = 6, 6
+common = false
+
+[cb_defense_mutant_bloodsuckers]:simulation_bloodsucker_1_2
+npc_in_squad = 3, 3
+common = false
+
+[cb_defense_mutant_chimeras]:simulation_chimera_2weak
+npc_in_squad = 2, 2
+common = false
+
+[cb_defense_mutant_giants]:simulation_gigant_2weak
+npc_in_squad = 2, 2
+common = false

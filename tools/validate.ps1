@@ -32,6 +32,47 @@ foreach ($file in $taskFiles) {
     }
 }
 
+$defenseFiles = @($taskFiles | Where-Object { $_.Directory.Name -eq 'cb_defense' })
+if ($defenseFiles.Count -ne 3) {
+    Fail "expected 3 defense tasks, found $($defenseFiles.Count)"
+}
+
+foreach ($file in $defenseFiles) {
+    $task = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
+    $defense = @($task.entities | Where-Object { $_.CONTROLLER -eq '@$ cb_wtf_combat.HeavyDefense' })
+    if ($defense.Count -ne 1) {
+        Fail "defense task '$($file.BaseName)' must use exactly one HeavyDefense controller"
+    }
+    $controller = $defense[0]
+    if (@($controller.sections).Count -ne 6) {
+        Fail "defense task '$($file.BaseName)' must contain exactly 6 assault groups"
+    }
+    if ([int]$controller.max_active -gt 3 -or [int]$controller.max_active -lt 1) {
+        Fail "defense task '$($file.BaseName)' has unsafe max_active value"
+    }
+    if ([int]$controller.trigger_radius -gt 60) {
+        Fail "defense task '$($file.BaseName)' must start only near the defense position"
+    }
+}
+
+$monolithPath = ($defenseFiles | Where-Object BaseName -eq 'bar_monolith_breakthrough').FullName
+$monolithTask = Get-Content -LiteralPath $monolithPath -Raw -Encoding UTF8 | ConvertFrom-Json
+$monolithDefense = @($monolithTask.entities | Where-Object { $_.CONTROLLER -eq '@$ cb_wtf_combat.HeavyDefense' })[0]
+$rpgGroupCount = @($monolithDefense.sections | Where-Object { $monolithDefense.rpg_sections -contains $_ }).Count
+if ($rpgGroupCount -lt 2) {
+    Fail 'Monolith defense must contain at least two RPG assault groups'
+}
+
+$squadDescriptionPath = Join-Path $repoRoot '00 Core/gamedata/configs/misc/squad_descr/squad_descr_cb_zone_contracts.ltx'
+if (-not (Test-Path -LiteralPath $squadDescriptionPath)) {
+    Fail 'fixed defense squad descriptions are missing'
+}
+$squadDescription = [IO.File]::ReadAllText($squadDescriptionPath, [Text.Encoding]::UTF8)
+$fixedSections = [regex]::Matches($squadDescription, '(?m)^\[(cb_defense_[^\]]+)\]')
+if ($fixedSections.Count -lt 11 -or [regex]::Matches($squadDescription, '(?m)^common\s*=\s*false\s*$').Count -lt $fixedSections.Count) {
+    Fail 'every fixed defense squad must use common=false'
+}
+
 $xmlFiles = Get-ChildItem -LiteralPath $repoRoot -Recurse -Filter '*.xml' -File |
     Where-Object { $_.FullName -notmatch '[\\/]dist[\\/]' }
 foreach ($file in $xmlFiles) {

@@ -9,10 +9,10 @@
 Соберите архив командой:
 
 ```powershell
-pwsh ./tools/build-release.ps1 -Version 2.1.0
+pwsh ./tools/build-release.ps1 -Version 2.2.0
 ```
 
-В ModDB загружаются `dist/Zone.Contracts.v2.1.0.FOMOD.RU.zip` и `dist/Zone.Contracts.v2.1.0.FOMOD.EN.zip`. Это те же артефакты, которые используются в GitHub Releases.
+В ModDB загружаются `dist/Zone.Contracts.v2.2.0.FOMOD.RU.zip` и `dist/Zone.Contracts.v2.2.0.FOMOD.EN.zip`. Это те же артефакты, которые используются в GitHub Releases.
 
 ## Краткое описание
 
@@ -49,10 +49,10 @@ pwsh ./tools/build-release.ps1 -Version 2.1.0
 Build both archives with:
 
 ```powershell
-pwsh ./tools/build-release.ps1 -Version 2.1.0
+pwsh ./tools/build-release.ps1 -Version 2.2.0
 ```
 
-Upload `dist/Zone.Contracts.v2.1.0.FOMOD.RU.zip` and `dist/Zone.Contracts.v2.1.0.FOMOD.EN.zip` to ModDB. These are the same artifacts published by GitHub Releases.
+Upload `dist/Zone.Contracts.v2.2.0.FOMOD.RU.zip` and `dist/Zone.Contracts.v2.2.0.FOMOD.EN.zip` to ModDB. These are the same artifacts published by GitHub Releases.
 
 ### Short description
 

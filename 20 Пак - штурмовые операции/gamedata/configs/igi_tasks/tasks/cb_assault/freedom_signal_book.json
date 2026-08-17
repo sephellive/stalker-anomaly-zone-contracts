@@ -4,7 +4,7 @@
 	"cb_pack": "assault",
 	"repeat_timeout": 604800,
 	"preconditions": [
-		"$ db.actor:character_rank() >= 3000",
+		"$ db.actor:character_rank() >= 5000",
 		"$ cb_wtf_combat.pack_available('assault')",
 		"$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 3, 4)",
 		"$ cb_wtf_combat.base_assault_ready(|CACHE.task_giver_id|, 'mil_smart_terrain_7_7', 'freedom')"

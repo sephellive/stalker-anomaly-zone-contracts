@@ -3,10 +3,10 @@
 	"CREDITS": "Sephellive, Igigog, folk, Lasse Scheyde",
 	"cb_pack": "fieldwork",
 	"repeat_timeout": 172800,
-	"preconditions": ["$ cb_wtf_combat.pack_available('fieldwork')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 1, 4)", "$ cb_wtf_combat.has_valid_smarts(|route.ids|, 3)"],
+	"preconditions": ["$ db.actor:character_rank() >= 1500", "$ cb_wtf_combat.pack_available('fieldwork')", "$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 1, 4)", "$ cb_wtf_combat.has_valid_smarts(|route.ids|, 5)"],
 	"entities": [
 		{"ids": "$ igi_finder.get_smarts(0,1)", "link_id": "route"},
-		{"ids": "$ |route.ids|", "GEN": "@$ igi_generate.Split('ids', 'id', 3)", "CONTROLLER": "@$ igi_target_visit.Visit", "to_description": true}
+		{"ids": "$ |route.ids|", "GEN": "@$ igi_generate.Split('ids', 'id', 5)", "CONTROLLER": "@$ igi_target_visit.Visit", "to_description": true}
 	],
 	"rewarder": "@$ cb_wtf_combat.reward(2400, 5)",
 	"icon": "ui_inGame2_Put_v_pripyat",

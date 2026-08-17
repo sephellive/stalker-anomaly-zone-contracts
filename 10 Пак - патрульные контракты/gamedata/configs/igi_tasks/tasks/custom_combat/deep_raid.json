@@ -4,7 +4,7 @@
 	"cb_pack": "patrol",
 	"repeat_timeout": 345600,
 	"preconditions": [
-		"$ db.actor:character_rank() >= 5000",
+		"$ db.actor:character_rank() >= 6000",
 		"$ cb_wtf_combat.has_valid_smarts(|smart.ids|, 1)",
 		"$ cb_wtf_combat.pack_available('patrol')",
 		"$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 8, 8)"

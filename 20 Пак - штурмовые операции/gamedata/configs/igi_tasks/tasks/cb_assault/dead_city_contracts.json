@@ -4,7 +4,7 @@
 	"cb_pack": "assault",
 	"repeat_timeout": 604800,
 	"preconditions": [
-		"$ db.actor:character_rank() >= 4000",
+		"$ db.actor:character_rank() >= 6500",
 		"$ cb_wtf_combat.pack_available('assault')",
 		"$ cb_wtf_combat.offer_slot(|CACHE.task_giver_id|, 4, 4)",
 		"$ cb_wtf_combat.base_assault_ready(|CACHE.task_giver_id|, 'cit_killers', 'killer')"

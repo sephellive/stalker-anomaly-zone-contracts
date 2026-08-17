@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <string_table>
 	<string id="igi_task_text_cb_defense_bar_mutant_surge_name"><text>Beasts at the South Gate</text></string>
-	<string id="igi_task_text_cb_defense_bar_mutant_surge_about"><text>A large mutant migration is moving from Garbage toward Rostok. Meet all three packs at the southern checkpoint before they reach the Bar.</text></string>
-	<string id="igi_task_text_cb_defense_bar_mutant_surge_text"><text>Destroy three mutant packs at Rostok's southern checkpoint.</text></string>
+	<string id="igi_task_text_cb_defense_bar_mutant_surge_about"><text>This is no migration but a full surge: large dog and pseudodog packs, snorks, bloodsuckers, chimeras and pseudogiants. Reach the southern checkpoint, wait for the signal and hold until the last creature is dead.</text></string>
+	<string id="igi_task_text_cb_defense_bar_mutant_surge_text"><text>Reach Rostok's southern checkpoint and repel six escalating mutant waves.</text></string>
 	<string id="igi_task_text_cb_defense_bar_mutant_surge_finish"><text>The southern approach is secure again.</text></string>
 	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_name"><text>Breakthrough at the Barrier</text></string>
-	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_about"><text>Several Monolith squads broke through the Barrier and are pushing toward Rostok from Army Warehouses. Stop them at the northern checkpoint.</text></string>
-	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_text"><text>Destroy three Monolith squads at Rostok's northern checkpoint.</text></string>
+	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_about"><text>Six Monolith assault groups broke through the Barrier and are pushing toward Rostok from Army Warehouses. They include exoskeleton troops and RPG operators. Take position at the northern checkpoint, wait for contact and hold the line.</text></string>
+	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_text"><text>Reach Rostok's northern checkpoint and destroy all six Monolith assault groups.</text></string>
 	<string id="igi_task_text_cb_defense_bar_monolith_breakthrough_finish"><text>None of them reached the Bar. The line held.</text></string>
 	<string id="igi_task_text_cb_defense_bar_raider_push_name"><text>Raid on Rostok</text></string>
-	<string id="igi_task_text_cb_defense_bar_raider_push_about"><text>Bandit assault groups are moving against the southern checkpoint. Engage them outside before the garrison is pinned at the gates.</text></string>
-	<string id="igi_task_text_cb_defense_bar_raider_push_text"><text>Repel the bandit raid on Rostok.</text></string>
+	<string id="igi_task_text_cb_defense_bar_raider_push_about"><text>The bandits have assembled six heavy assault groups to break Rostok's southern checkpoint. Take position outside the gate and hold until the raid collapses.</text></string>
+	<string id="igi_task_text_cb_defense_bar_raider_push_text"><text>Reach Rostok's southern checkpoint and repel six bandit assault groups.</text></string>
 	<string id="igi_task_text_cb_defense_bar_raider_push_finish"><text>The raid died at the gate.</text></string>
+	<string id="cb_wtf_defense_monolith_warning"><text>The monochromes are about to emerge near the checkpoint. Everyone, take your positions!</text></string>
+	<string id="cb_wtf_defense_monolith_reinforcements"><text>Their second line is moving. RPGs and heavy infantry - keep your heads down!</text></string>
+	<string id="cb_wtf_defense_monolith_failure"><text>The northern line was abandoned. The operation has failed.</text></string>
+	<string id="cb_wtf_defense_monolith_prepare"><text>Take position at Rostok's northern checkpoint.</text></string>
+	<string id="cb_wtf_defense_monolith_fight"><text>Hold the northern checkpoint and destroy all six groups.</text></string>
+	<string id="cb_wtf_defense_mutant_warning"><text>The pack is reaching the road. Contact in seconds - hold the gate!</text></string>
+	<string id="cb_wtf_defense_mutant_reinforcements"><text>That was only the first mass. Bloodsuckers and heavy mutants are coming!</text></string>
+	<string id="cb_wtf_defense_mutant_failure"><text>The southern checkpoint was abandoned. The packs broke through to Rostok.</text></string>
+	<string id="cb_wtf_defense_mutant_prepare"><text>Take position at Rostok's southern checkpoint.</text></string>
+	<string id="cb_wtf_defense_mutant_fight"><text>Hold the southern checkpoint until all six waves are destroyed.</text></string>
+	<string id="cb_wtf_defense_raider_warning"><text>Raiders on the road. Everyone take cover - here they come!</text></string>
+	<string id="cb_wtf_defense_raider_reinforcements"><text>Their reserve is moving up. More heavy groups are coming for the gate!</text></string>
+	<string id="cb_wtf_defense_raider_failure"><text>The southern line was abandoned. The raiders broke through to Rostok.</text></string>
+	<string id="cb_wtf_defense_raider_prepare"><text>Take position at Rostok's southern checkpoint.</text></string>
+	<string id="cb_wtf_defense_raider_fight"><text>Hold the southern checkpoint and destroy all six groups.</text></string>
 </string_table>
